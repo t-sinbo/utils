@@ -59,3 +59,16 @@ export function validatAlphabets (str) {
     callback();
   }
 };
+/**
+ * @description 电话号码验证
+ */
+export const isPhoneValids = (phone) => {
+  const reg = /^1[0-9]{10}$/;
+  if (phone === "") {
+    return false;
+  } else if (!reg.test(phone)) {
+    return false
+  } else {
+    return true;
+  }
+};
